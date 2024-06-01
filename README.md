@@ -10,3 +10,14 @@ This project is divided into three parts:
 - [VisionOS Application](./MediaViewer/README.md) under '/MediaViewer'
 
 To run the app, open MediaViewer/MediaViewer.xcodeproj using Xcode Version 15.1 beta. Then click on the play button.
+
+# Credits
+
+- [Steffen Büschking](https://github.com/steffbue)
+- [Sarp Güven](https://git.tu-berlin.de/sguven)
+- [Antonin Marxer](https://github.com/PheonBest)
+
+# License
+
+This project is licensed under GPL 2.0 license.
+This means that you can use, modify and distribute the code as long as you keep the same license.
