@@ -1,0 +1,70 @@
+[+] Building 419.1s (16/16) FINISHED docker:desktop-linux
+=> [internal] load .dockerignore 0.0s
+=> => transferring context: 2B 0.0s
+=> [internal] load build definition from Dockerfile 0.0s
+=> => transferring dockerfile: 598B 0.0s
+=> [internal] load metadata for docker.io/library/node:18-alpine 2.1s
+=> [auth] library/node:pull token for registry-1.docker.io 0.0s
+=> [ 1/11] FROM docker.io/library/node:18-alpine@sha256:b1a0356f7d6b86c958a06949d3db3f7fb27f95f627aa6157cb98bc65c801efa2 4.9s
+=> => resolve docker.io/library/node:18-alpine@sha256:b1a0356f7d6b86c958a06949d3db3f7fb27f95f627aa6157cb98bc65c801efa2 0.0s
+=> => sha256:f3776b60850deec9eb1da7746fa20b3f000bf153408dc896d6606704c83f948d 7.14kB / 7.14kB 0.0s
+=> => sha256:661ff4d9561e3fd050929ee5097067c34bafc523ee60f5294a37fd08056a73ca 3.41MB / 3.41MB 0.4s
+=> => sha256:0f158788f409a5decd9495205daf4aa17df26d8219d6dc12acab5949342866fe 40.24MB / 40.24MB 1.9s
+=> => sha256:f028dff98271801e449c3ebac94a319851128c0ec687e13e00a68b2d98ec4700 2.34MB / 2.34MB 0.9s
+=> => sha256:b1a0356f7d6b86c958a06949d3db3f7fb27f95f627aa6157cb98bc65c801efa2 1.43kB / 1.43kB 0.0s
+=> => sha256:8842b060b01af71c082cee310b428a2d825e940d9fd9e450e05d726aea66a480 1.16kB / 1.16kB 0.0s
+=> => extracting sha256:661ff4d9561e3fd050929ee5097067c34bafc523ee60f5294a37fd08056a73ca 0.2s
+=> => sha256:18f25c33705ddc3351cc4893fdc0a38405bdd0741643798918fa2b0146fd5a9d 451B / 451B 0.7s
+=> => extracting sha256:0f158788f409a5decd9495205daf4aa17df26d8219d6dc12acab5949342866fe 2.7s
+=> => extracting sha256:f028dff98271801e449c3ebac94a319851128c0ec687e13e00a68b2d98ec4700 0.1s
+=> => extracting sha256:18f25c33705ddc3351cc4893fdc0a38405bdd0741643798918fa2b0146fd5a9d 0.0s
+=> [internal] load build context 8.3s
+=> => transferring context: 344.10MB 7.9s
+=> [ 2/11] RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev g 32.0s
+=> [ 3/11] WORKDIR /opt/ 0.0s
+=> [ 4/11] COPY package.json yarn.lock ./ 0.0s
+=> [ 5/11] RUN yarn global add node-gyp 13.8s
+=> [ 6/11] RUN yarn config set network-timeout 600000 -g 1.9s
+=> [ 7/11] RUN yarn install --network-timeout 600000 309.7s
+=> [ 8/11] WORKDIR /opt/app 0.0s
+=> [ 9/11] COPY . . 4.9s
+=> [10/11] RUN chown -R node:node /opt/app 27.3s
+=> ERROR [11/11] RUN ["yarn", "build"] 22.4s
+
+---
+
+> [11/11] RUN ["yarn", "build"]:
+> 2.177 yarn run v1.22.19
+> 2.420 $ strapi build
+> 14.56 - Building build context
+> 14.57
+> 14.84 [INFO] Including the following ENV variables as part of the JS bundle:
+> 14.84 - ADMIN_PATH
+> 14.84 - STRAPI_ADMIN_BACKEND_URL
+> 14.84 - STRAPI_TELEMETRY_DISABLED
+> 14.95 ✔ Building build context (401ms)
+> 14.95 - Building admin panel
+> 14.95
+> 21.66 ✘ [ERROR] Cannot start service: Host version "0.16.17" does not match binary version "0.19.2"
+> 21.66
+> 21.66 1 error
+> 21.82 [ERROR] The service is no longer running
+> 21.82 ✖ Building admin panel
+> 21.82 [ERROR] There seems to be an unexpected error, try again with --debug for more information
+> 21.82
+> 21.93 error Command failed with exit code 1.
+
+## 21.93 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+## Dockerfile:18
+
+16 | RUN chown -R node:node /opt/app
+17 | USER node
+18 | >>> RUN ["yarn", "build"]
+19 | EXPOSE 1337
+20 | CMD ["yarn", "develop"]
+
+---
+
+ERROR: failed to solve: process "yarn build" did not complete successfully: exit code: 1
+(base) amarxer@MBP-de-Antonin media-viewer-cms %

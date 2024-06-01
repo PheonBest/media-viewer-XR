@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "readers",
+  "info": {
+    "singularName": "reader",
+    "pluralName": "readers",
+    "displayName": "Reader",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "userName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "regex": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+      "unique": true,
+      "required": true
+    },
+    "reader_media": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reader-medium.reader-medium",
+      "mappedBy": "reader"
+    }
+  }
+}

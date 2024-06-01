@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reader_mediums",
+  "info": {
+    "singularName": "reader-medium",
+    "pluralName": "reader-mediums",
+    "displayName": "ReaderMedium",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reader": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::reader.reader",
+      "inversedBy": "reader_media"
+    },
+    "medium": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::medium.medium",
+      "inversedBy": "reader_media"
+    },
+    "readTime": {
+      "type": "integer"
+    },
+    "read": {
+      "type": "boolean"
+    },
+    "archived": {
+      "type": "boolean"
+    },
+    "lastOpenedAt": {
+      "type": "datetime"
+    },
+    "rating": {
+      "type": "enumeration",
+      "enum": [
+        "up",
+        "down"
+      ]
+    }
+  }
+}

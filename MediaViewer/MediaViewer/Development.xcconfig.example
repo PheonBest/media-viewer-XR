@@ -1,0 +1,14 @@
+//
+//  Config.xcconfig
+//  MediaViewer
+//
+//  Created by Antonin Marxer on 14/01/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = https:/$()/awt-strapi.antoninmarxer.com
+// BASE_URL = http:/$()/localhost:1337
+STRAPI_TOKEN = my_strapi_tokens
+STRAPI_USER_ID = 1

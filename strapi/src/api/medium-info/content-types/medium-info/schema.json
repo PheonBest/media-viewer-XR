@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "media_info",
+  "info": {
+    "singularName": "medium-info",
+    "pluralName": "media-info",
+    "displayName": "Info",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "releaseDate": {
+      "pluginOptions": {},
+      "type": "datetime"
+    },
+    "rating": {
+      "pluginOptions": {},
+      "type": "float"
+    },
+    "nbVoters": {
+      "pluginOptions": {},
+      "type": "integer"
+    }
+  }
+}

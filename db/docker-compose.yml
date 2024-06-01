@@ -1,0 +1,26 @@
+version: "3"
+services:
+  strapiDB:
+    container_name: strapi-db
+    image: postgres:12.0-alpine
+    restart: unless-stopped
+    env_file: .env.prod
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    volumes:
+      - pg-data:/var/lib/postgresql/data/
+      - "./sql-scripts:/docker-entrypoint-initdb.d"
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./pg_hba.conf:/etc/postgresql/pg_hba.conf
+    ports:
+      - "5433:5432"
+    networks:
+      - strapi
+
+volumes:
+  pg-data:
+
+networks:
+  strapi:
+    name: Strapi
+    driver: bridge
+    external: true

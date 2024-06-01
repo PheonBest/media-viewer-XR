@@ -1,0 +1,514 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Sphere", "marker", "marker_1", "marker_2", "marker_3", "marker_4"]
+    float3 xformOp:translate = (-0.07521574, 0.27925214, 5.327947e-8)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Sphere "Sphere" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (0, 1.2217305, 0)
+        }
+    )
+    {
+        reorder nameChildren = ["Material_1", "marker_brazil", "marker_south_africa", "InputTarget", "Collider", "marker_india", "marker_germany", "marker_france", "marker_spain", "marker_usa"]
+        rel material:binding = </Root/Sphere/Material_1> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double radius = 0.15
+        quatf xformOp:orient = (0.81915206, 0, 0.5735764, 0)
+        float3 xformOp:translate = (0.1, 0.5, -0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "Material_1"
+        {
+            prepend token outputs:mtlx:surface.connect = </Root/Sphere/Material_1/PreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (299.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                color3f inputs:diffuseColor.connect = </Root/Sphere/Material_1/Image.outputs:out>
+                color3f inputs:emissiveColor = (0, 0, 0) (
+                    colorSpace = "srgb_texture"
+                )
+                float inputs:ior = 1.5
+                float inputs:metallic = 1
+                float3 inputs:normal
+                float inputs:occlusion = 1
+                float inputs:opacity = 1
+                float inputs:opacityThreshold
+                float inputs:roughness = 0.8
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (59.36328, 80.23828)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 22
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:opacity", "inputs:metallic", "inputs:metallic"]
+            }
+
+            def Shader "Image"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Materials/8k_earth_daymap.jpg@
+                string inputs:filtertype = "linear"
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-260.89453, 137.61328)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 13
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:filtertype"]
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.3, 0.3, 0.3038864)
+                float height = 0.3
+                float radius = 0.1519432
+                token shapeType = "Sphere"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0, 0, 0.0019432008)
+                }
+            }
+        }
+
+        def "marker_india" (
+            active = true
+            customData = {
+                float3 rotationEulerHint = (0.78539807, 0, 0)
+            }
+            references = @marker.usda@
+        )
+        {
+            quatf xformOp:orient = (0.92387956, 0.38268334, 0, 0)
+            float3 xformOp:scale = (0.3151233, 0.3151233, 0.3151233)
+            float3 xformOp:translate = (-0.032260105, 0.04574895, 0.1427451)
+
+            def RealityKitComponent "InputTarget"
+            {
+                uniform token info:id = "RealityKit.InputTarget"
+            }
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (0.03, 0.0475, 0.03)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                        float3 position = (0, 0.01125, 0)
+                    }
+                }
+            }
+        }
+
+        def "marker_germany" (
+            active = true
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0.26179937)
+            }
+            references = @marker.usda@
+        )
+        {
+            quatf xformOp:orient = (0.9914449, 0, 0, 0.13052599)
+            float3 xformOp:scale = (0.3151233, 0.3151233, 0.3151233)
+            float3 xformOp:translate = (-0.09304857, 0.12212828, 0.014045856)
+
+            over "Cylinder"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_germany/Cylinder/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Sphere_1"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_germany/Sphere_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Material"
+            {
+                token outputs:mtlx:surface.connect = </Root/Sphere/marker_germany/Material/PreviewSurface.outputs:out>
+
+                over "PreviewSurface"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Sphere/marker_germany/Material/Constant.outputs:out>
+                }
+            }
+
+            def RealityKitComponent "InputTarget"
+            {
+                uniform token info:id = "RealityKit.InputTarget"
+            }
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (0.03, 0.0475, 0.03)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                        float3 position = (0, 0.01125, 0)
+                    }
+                }
+            }
+        }
+
+        def "marker_france" (
+            active = true
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0.34906584)
+            }
+            references = @marker.usda@
+        )
+        {
+            quatf xformOp:orient = (0.9848077, 0, 0, 0.17364831)
+            float3 xformOp:scale = (0.3151233, 0.3151233, 0.3151233)
+            float3 xformOp:translate = (-0.10334492, 0.112918735, 0.00479011)
+
+            over "Cylinder"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_france/Cylinder/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Sphere_1"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_france/Sphere_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Material"
+            {
+                token outputs:mtlx:surface.connect = </Root/Sphere/marker_france/Material/PreviewSurface.outputs:out>
+
+                over "PreviewSurface"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Sphere/marker_france/Material/Constant.outputs:out>
+                }
+            }
+
+            def RealityKitComponent "InputTarget"
+            {
+                uniform token info:id = "RealityKit.InputTarget"
+            }
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (0.03, 0.0475, 0.03)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                        float3 position = (0, 0.01125, 0)
+                    }
+                }
+            }
+        }
+
+        def "marker_spain" (
+            active = true
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0.5235988)
+            }
+            references = @marker.usda@
+        )
+        {
+            quatf xformOp:orient = (0.9659258, 0, 0, 0.25881907)
+            float3 xformOp:scale = (0.31512332, 0.31512332, 0.3151233)
+            float3 xformOp:translate = (-0.11625604, 0.10011801, -0.009755614)
+
+            over "Cylinder"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_spain/Cylinder/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Sphere_1"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_spain/Sphere_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Material"
+            {
+                token outputs:mtlx:surface.connect = </Root/Sphere/marker_spain/Material/PreviewSurface.outputs:out>
+
+                over "PreviewSurface"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Sphere/marker_spain/Material/Constant.outputs:out>
+                }
+            }
+
+            def RealityKitComponent "InputTarget"
+            {
+                uniform token info:id = "RealityKit.InputTarget"
+            }
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (0.03, 0.0475, 0.03)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                        float3 position = (0, 0.01125, 0)
+                    }
+                }
+            }
+        }
+
+        def "marker_usa" (
+            active = true
+            customData = {
+                float3 rotationEulerHint = (-0.5235988, -0.17453294, -3.782759e-9)
+            }
+            references = @marker.usda@
+        )
+        {
+            quatf xformOp:orient = (0.9622502, -0.25783417, -0.08418601, -0.022557573)
+            float3 xformOp:scale = (0.3151233, 0.3151233, 0.3151233)
+            float3 xformOp:translate = (0.016714737, 0.09386894, -0.12165083)
+
+            over "Cylinder"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_usa/Cylinder/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Sphere_1"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_usa/Sphere_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Material"
+            {
+                token outputs:mtlx:surface.connect = </Root/Sphere/marker_usa/Material/PreviewSurface.outputs:out>
+
+                over "PreviewSurface"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Sphere/marker_usa/Material/Constant.outputs:out>
+                }
+            }
+
+            def RealityKitComponent "InputTarget"
+            {
+                uniform token info:id = "RealityKit.InputTarget"
+            }
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (0.03, 0.0475, 0.03)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                        float3 position = (0, 0.01125, 0)
+                    }
+                }
+            }
+        }
+
+        def "marker_brazil" (
+            active = true
+            customData = {
+                float3 rotationEulerHint = (-1.2217305, 0.8726645, -1.3909252e-7)
+            }
+            references = @marker.usda@
+        )
+        {
+            quatf xformOp:orient = (0.7424039, -0.5198368, 0.3461886, 0.2424038)
+            float3 xformOp:scale = (0.3151233, 0.3151233, 0.3151233)
+            float3 xformOp:translate = (-0.09870605, -0.023129135, -0.11472298)
+
+            over "Cylinder"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_brazil/Cylinder/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Sphere_1"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_brazil/Sphere_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Material"
+            {
+                token outputs:mtlx:surface.connect = </Root/Sphere/marker_brazil/Material/PreviewSurface.outputs:out>
+
+                over "PreviewSurface"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Sphere/marker_brazil/Material/Constant.outputs:out>
+                }
+            }
+
+            def RealityKitComponent "InputTarget"
+            {
+                uniform token info:id = "RealityKit.InputTarget"
+            }
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (0.03, 0.0475, 0.03)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                        float3 position = (0, 0.01125, 0)
+                    }
+                }
+            }
+        }
+
+        def "marker_south_africa" (
+            active = true
+            customData = {
+                float3 rotationEulerHint = (0, 0, 1.3962634)
+            }
+            references = @marker.usda@
+        )
+        {
+            quatf xformOp:orient = (0.76604444, 0, 0, 0.6427876)
+            float3 xformOp:scale = (0.3151233, 0.3151233, 0.3151233)
+            float3 xformOp:translate = (-0.12534107, -0.070386544, 0.04972771)
+
+            over "Cylinder"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_south_africa/Cylinder/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Sphere_1"
+            {
+                over "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Sphere/marker_south_africa/Sphere_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+                }
+            }
+
+            over "Material"
+            {
+                token outputs:mtlx:surface.connect = </Root/Sphere/marker_south_africa/Material/PreviewSurface.outputs:out>
+
+                over "PreviewSurface"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Sphere/marker_south_africa/Material/Constant.outputs:out>
+                }
+            }
+
+            def RealityKitComponent "InputTarget"
+            {
+                uniform token info:id = "RealityKit.InputTarget"
+            }
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (0.03, 0.0475, 0.03)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                        float3 position = (0, 0.01125, 0)
+                    }
+                }
+            }
+        }
+    }
+}
+

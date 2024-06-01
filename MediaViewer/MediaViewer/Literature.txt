@@ -1,0 +1,63 @@
+Scientific Report on Climate Change
+
+"Climate change is a pressing global issue that demands urgent attention and comprehensive action" [1]. 
+The scientific evidence overwhelmingly supports the conclusion that human activities, particularly the burning of fossil fuels and deforestation, are major contributors to the observed changes in the Earth's climate. [2]
+The consequences of climate change are far-reaching, affecting ecosystems, weather patterns, and posing significant risks to human societies. [3]
+
+Climate change refers to long-term changes in temperature, precipitation, and other atmospheric conditions on Earth. [1]
+Over the past century, the planet has experienced a discernible warming trend, with an increase in average global temperatures. [4]
+his warming is primarily attributed to the buildup of greenhouse gases (GHGs) in the atmosphere, such as carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). [5]
+The main sources of these emissions are the burning of fossil fuels for energy and industrial processes, deforestation, and certain agricultural practices. [6]
+
+Global temperatures have risen approximately 1.1 degrees Celsius since the pre-industrial era. [4]
+This warming is evident in rising sea surface temperatures, melting glaciers, and shifts in temperature patterns across the globe. [7][8][9]
+The melting of polar ice caps and glaciers contributes to rising sea levels. [10]
+Coastal regions are experiencing increased flooding, erosion, and saltwater intrusion, posing threats to communities and ecosystems. [11]
+Climate change is linked to an increase in the frequency and intensity of extreme weather events, including hurricanes, heatwaves, droughts, and heavy rainfall. [12]
+These events have wide-ranging impacts on agriculture, infrastructure, and human health. [3]
+The absorption of excess atmospheric CO2 by the world's oceans has led to ocean acidification. This poses a serious threat to marine ecosystems, particularly coral reefs and shelled organisms. [13]
+
+Climate change is disrupting ecosystems and biodiversity. Species are facing challenges in adapting to rapid environmental changes, 
+leading to shifts in migration patterns, altered breeding seasons, and, in some cases, extinction. [14]
+
+Changes in temperature and precipitation patterns affect agricultural productivity, 
+leading to shifts in crop yields and threatening global food security. [15] 
+Altered precipitation patterns and increased evaporation pose challenges to freshwater availability. [16]
+Regions dependent on snowmelt and glacier-fed rivers face heightened risks. [17]
+The spread of diseases, heat-related illnesses, and respiratory issues are on the rise due to changing climate conditions. Vulnerable populations are particularly at risk. [3]
+
+Reducing GHG emissions is crucial for mitigating climate change. [18]
+Transitioning to renewable energy sources, increasing energy efficiency, and implementing carbon capture technologies are essential steps. [19]
+Adaptation strategies involve preparing for and responding to the impacts of climate change. [20]
+This includes developing resilient infrastructure, sustainable land-use planning, and enhancing water resource management. [21]
+
+Climate change is a complex and multifaceted challenge that requires global cooperation and immediate action. [22]
+The scientific evidence presented in this report underscores the urgency of addressing the root causes of climate change and implementing effective mitigation and adaptation strategies.
+Failure to act will have profound consequences for ecosystems, economies, and the well-being of present and future generations. [23]
+The time for decisive and coordinated action is now. [24]
+
+
+[1] https://medium.com/@victorayoola22/climate-change-is-a-pressing-global-issue-that-demands-urgent-attention-and-concerted-action-5daae94b2683 (last accessed 18.12.2023)
+[2] https://climate.nasa.gov/scientific-consensus/ (last accessed 18.12.2023)
+[3] https://climatechange.chicago.gov/climate-impacts/climate-impacts-human-health (last accessed 18.12.2023)
+[4] https://earthobservatory.nasa.gov/world-of-change/global-temperatures (last accessed 18.12.2023)
+[5] https://www.europarl.europa.eu/news/en/headlines/society/20230316STO77629/climate-change-the-greenhouse-gases-causing-global-warming (last accessed 18.12.2023)
+[6] https://climate.ec.europa.eu/climate-change/causes-climate-change_en (last accessed 18.12.2023)
+[7] https://climate.ec.europa.eu/climate-change/consequences-climate-change_en (last accessed 18.12.2023)
+[8] https://www.un.org/en/climatechange/what-is-climate-change (last accessed 18.12.2023)
+[9] https://climate.nasa.gov/evidence/ (last accessed 18.12.2023)
+[10] https://www.jpl.nasa.gov/edu/teach/activity/whats-causing-sea-level-rise-land-ice-vs-sea-ice/ (last accessed 18.12.2023)
+[11] https://www.ipcc.ch/srocc/chapter/chapter-4-sea-level-rise-and-implications-for-low-lying-islands-coasts-and-communities/ (last accessed 18.12.2023)
+[12] https://royalsociety.org/topics-policy/projects/climate-change-evidence-causes/question-13/ (last accessed 18.12.2023)
+[13] https://www.graygroupintl.com/blog/ocean-acidification (last accessed 18.12.2023)
+[14] https://www.sciencedirect.com/science/article/pii/S0048969720312948 (last accessed 18.12.2023)
+[15] https://climatechange.chicago.gov/climate-impacts/climate-impacts-agriculture-and-food-supply (last accessed 18.12.2023)
+[16] https://www.tutorchase.com/answers/ib/geography/how-does-climate-change-affect-water-management-planning (last accessed 18.12.2023)
+[17] https://link.springer.com/chapter/10.1007/978-981-16-5493-0_12 (last accessed 18.12.2023)
+[18] https://www.eea.europa.eu/en/topics/in-depth/climate-change-mitigation-reducing-emissions (last accessed 18.12.2023)
+[19] https://link.springer.com/article/10.1007/s10311-022-01435-8 (last accessed 18.12.2023)
+[20] https://unfccc.int/topics/adaptation-and-resilience/the-big-picture/introduction (last accessed 18.12.2023)
+[21] https://www.oecd.org/environment/cc/policy-perspectives-climate-resilient-infrastructure.pdf (last accessed 18.12.2023)
+[22] https://www.linkedin.com/pulse/what-major-challenges-climate-change-kai-schiller?trk=article-ssr-frontend-pulse_more-articles_related-content-card (last accessed 18.12.2023)
+[23] https://oceanpanel.org/wp-content/uploads/2022/06/transformations-sustainable-ocean-economy-eng.pdf (last accessed 18.12.2023)
+[24] https://reliefweb.int/report/world/global-health-community-calls-urgent-action-climate-and-health-cop28 (last accessed 18.12.2023)
